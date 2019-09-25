@@ -1,0 +1,12 @@
+build
+dist
+__pycache__
+pyinstaller
+package-lock.json
+tmpmain
+venv
+tmp.c
+bin
+lib
+include
+lib64

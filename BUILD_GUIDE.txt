@@ -1,0 +1,19 @@
+Steps to build
+
+Create virtualenv, set current working directory to location of this file.
+
+Create virtual environment
+$ virtualenv .
+
+Active virtual environment
+$ source ./bin/activate
+
+Install dependencies with pip
+pip pyinstaller
+PySide2
+pyinstaller
+etc..
+
+Compile binary module with cython
+cythonize -X language_level=3 -i tmp.py
+
