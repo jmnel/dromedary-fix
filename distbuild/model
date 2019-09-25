@@ -1,0 +1,32 @@
+x_cattle -- land allocation
+x_wheat
+x_corn
+x_tomatoes
+
+land = ( x_cattle ) + x_wheat + x_corn + x_tomatoes < 1000
+labour = 40 * x_cattle + 10 * 
+
+
+
+profit = 1600 * 0.25 * x_cattle
+	+ 5 * 50 * 	x_wheat
+	+ 6 * 80 *	x_corn
+	+ 0.5 * 1000 *	x_tomatoes
+
+
+
+labour:
+l = 40 * 0.25 * x_cattle
+	+ 10 * x_wheat
+	+ 12 * x_corn
+	+ 25 * x_tomatoes
+
+constraints:
+sum x_j over j <= 1000 acres
+l = 40*0.25 * x_cattle + 10 * x_wheat + 12 * x_corn + 25 * x_tomatoes <= 12000
+
+x_cattle / ( x_wheat + x_corn + x_tomatoes ) >= 20%
+
+x_tomatoes / 1000 <= 30%
+
+x_wheat / ( 1000 - x_wheat - x_corn - x_tomatoes ) <= 2.0
