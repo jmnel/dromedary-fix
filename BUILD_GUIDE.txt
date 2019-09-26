@@ -9,7 +9,7 @@ Active virtual environment
 $ source ./bin/activate
 
 Install dependencies with pip
-$ pip install pyinstaller PySide2
+$ pip install pyinstaller PySide2 cython
 
 Compile binary module with cython
 $ cythonize -X language_level=3 -i tmp.py
@@ -20,8 +20,13 @@ $ mv tmp.cpython* ./distbuild
 Change working directory to distbuild.
 $ cd distbuild
 
-Package with pyinstaller
+Package with pyinstaller using script.
+$ ./pyinstaller_script.sh
+
+This command use to be:
 $ pyinstaller -y --log-level=DEBUG ./tmpmain_manual.spec
 
 Your packaged executable is now found @
 './distbuild/dist/tmpmain/tmpmain'
+
+The spec file has been generated in distbuild/info.
